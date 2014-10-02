@@ -29,7 +29,10 @@
     "autoload":          {
         "psr-4": {
             "ZfTwitterWidget\\": "src/"
-        }
+        },
+        "classmap": [
+            "Module.php"
+        ]
     },
     "autoload-dev":      {
         "psr-4": {
