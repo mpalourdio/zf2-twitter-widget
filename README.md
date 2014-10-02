@@ -11,4 +11,37 @@
 zf2-twitter-widget
 ==================
 
-ZF2 view helper to easily display twitter timelines widgets
+ZF2 view helper to easily display twitter timelines widgets.
+
+- 1) Create an embed timeline here : https://twitter.com/settings/widgets/new
+- 2) In the javascript generated code, get the URL and the data-widget-id (minimum informations required)
+- 3) Finally, in a view, use with 
+
+```php
+echo $this->tw([
+    'dataWidgetId' => '1245687955000', => the id must be a string (quotes), because of long integer converted to float
+    'href'         => 'https://twitter.com/NickName',
+    'hrefText'     => 'Here type a title'
+]);
+```
+
+All these options are handled : see https://dev.twitter.com/web/embedded-timelines#options
+
+Their PHP equivalent as array keys to use in the view helper are  :
+
+```php
+'class'           => 'a css class, by default it will be twitter-timeline',
+'href'            => 'the link to the timeline',
+'hrefText'        => 'A title for your timeline to display',
+'dataWidgetId'    => 'your data widget ID, must be a string (!)',
+'dataTheme'       => 'ex: dark',
+'dataLinkColor'   => 'ex: #cc0000',
+'width'           => 300 (integer),
+'height'          => 400 (integer,
+'dataChrome'      => 'noheader nofooter noborders noscrollbar transparent', => a string with options separated by a single spalce
+'dataBorderColor' => 'border color used by the widget',
+'language'        => 'The widget language detected from the page, based on the HTML lang attribute of your content. You can also set the HTML lang attribute on the embed code itself.',
+'dataTweetLimit'  => 20,
+'dataRelated'     => 'benward,endform',
+'dataAriaPolite'  => 'polite or assertive',
+```
