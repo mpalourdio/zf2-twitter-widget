@@ -13,6 +13,19 @@ zf2-twitter-widget
 
 ZF2 view helper to easily display twitter timelines widgets.
 
+Requirements
+============
+PHP 5.5+ - Only Composer installation supported
+
+Installation
+============
+Add to the **require** list of your composer.json
+"mpalourdio/zf2-twitter-widget" : "dev-master"
+
+Add "ZfTwitterWidget" to your **modules list** in **application.config.php**
+
+Usage
+=====
 - 1) Create an embed timeline here : https://twitter.com/settings/widgets/new
 - 2) In the javascript generated code, get the URL and the data-widget-id (minimum informations required)
 - 3) Finally, in a view, use with 
