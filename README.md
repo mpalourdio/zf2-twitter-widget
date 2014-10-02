@@ -30,10 +30,10 @@ All these options are handled : see https://dev.twitter.com/web/embedded-timelin
 Their PHP equivalent as array keys to use in the view helper are  :
 
 ```php
-'class'           => 'a css class, by default it will be twitter-timeline',
-'href'            => 'the link to the timeline',
+'class'           => 'A css class, by default it will be twitter-timeline',
+'href'            => 'The link to the timeline',
 'hrefText'        => 'A title for your timeline to display',
-'dataWidgetId'    => 'your data widget ID, must be a string (!)',
+'dataWidgetId'    => 'Your data widget ID : must be a string (!)',
 'dataTheme'       => 'ex: dark',
 'dataLinkColor'   => 'ex: #cc0000',
 'width'           => 300 (integer),
