@@ -20,7 +20,7 @@ PHP 5.5+ - Only Composer installation supported
 Installation
 ============
 Add to the **require** list of your composer.json
-"mpalourdio/zf2-twitter-widget" : "dev-master"
+```"mpalourdio/zf2-twitter-widget" : "dev-master"```
 
 Add "ZfTwitterWidget" to your **modules list** in **application.config.php**
 
