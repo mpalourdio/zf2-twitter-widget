@@ -11,6 +11,7 @@ use TwitterWidgets\Options\WidgetOptions;
 use TwitterWidgets\Timeline\TimelineBuilder;
 use ZfTwitterWidget\Factory\TimelineBuilderFactory;
 use ZfTwitterWidget\Factory\WidgetOptionsFactory;
+use ZfTwitterWidget\View\OneTimeJsViewHelper;
 use ZfTwitterWidget\View\TwViewHelperFactory;
 
 return [
@@ -21,8 +22,11 @@ return [
         ]
     ],
     'view_helpers'    => [
-        'factories' => [
+        'factories'  => [
             'tw' => TwViewHelperFactory::class,
+        ],
+        'invokables' => [
+            'twJs' => OneTimeJsViewHelper::class,
         ]
     ],
 ];
