@@ -18,6 +18,6 @@ class OneTimeJsViewHelperTest extends \PHPUnit_Framework_TestCase
     {
         $oneTimeJsVH = new OneTimeJsViewHelper();
 
-        $this->assertGreaterThan(0, strpos($oneTimeJsVH(), 'window.twttr'));
+        $this->assertGreaterThan(0, strpos($oneTimeJsVH(), 'widgets.js'));
     }
 }
