@@ -26,4 +26,25 @@ class TwViewHelperTest extends \PHPUnit_Framework_TestCase
 
         $this->assertGreaterThan(0, strpos($viewHelper->__invoke([]), 'class="twitter-timeline"'));
     }
+
+    /**
+     * @expectedException \InvalidArgumentException
+     */
+    public function testWrongTypeThrowsException()
+    {
+        $widgetOption = $this
+            ->getMockBuilder(WidgetOptions::class)
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $timelineBuilder = $this
+            ->getMockBuilder(TimelineBuilder::class)
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $viewHelper = new TwViewHelper($widgetOption, $timelineBuilder);
+        $options    = new \stdClass();
+
+        $viewHelper->__invoke($options);
+    }
 }

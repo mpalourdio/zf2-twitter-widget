@@ -10,7 +10,9 @@
 
 namespace ZfTwitterWidget\View;
 
+use InvalidArgumentException;
 use TwitterWidgets\Options\WidgetOptions;
+use TwitterWidgets\Options\WidgetOptionsInterface;
 use TwitterWidgets\Timeline\TimelineBuilderInterface;
 use Zend\View\Helper\AbstractHelper;
 
@@ -30,12 +32,18 @@ class TwViewHelper extends AbstractHelper
     }
 
     /**
-     * @param  array $options
-     * @param  bool  $addJs
+     * @param  array|WidgetOptionsInterface $options
+     * @param  bool                         $addJs
      * @return string
+     * @throws InvalidArgumentException
      */
     public function __invoke($options, $addJs = true)
     {
+        if (!is_array($options) && !($options instanceof WidgetOptionsInterface)) {
+            throw new InvalidArgumentException(
+                '"options" must be an array or an implementation of WidgetOptionsInterface'
+            );
+        }
         $this->widgetOptions->setFromArray($options);
 
         return $this->timeline->renderWidget($addJs);
