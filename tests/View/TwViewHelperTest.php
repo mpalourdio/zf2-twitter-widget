@@ -13,18 +13,38 @@ namespace ZfTwitterWidgetTests\View;
 use TwitterWidgets\Options\WidgetOptions;
 use TwitterWidgets\Timeline\TimelineBuilder;
 use ZfTwitterWidget\View\TwViewHelper;
-use ZfTwitterWidgetTests\Util\ServiceManagerFactory;
 
 class TwViewHelperTest extends \PHPUnit_Framework_TestCase
 {
     public function testTwViewHelper()
     {
+        $widgetOption = $this
+            ->getMockBuilder(WidgetOptions::class)
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $timelineBuilder = $this
+            ->getMockBuilder(TimelineBuilder::class)
+            ->disableOriginalConstructor()
+            ->setMethods(['filterAttr', 'getSingleWidgetJs'])
+            ->getMock();
+
+        $timelineBuilder
+            ->expects($this->once())
+            ->method('filterAttr')
+            ->willReturn([]);
+
+        $timelineBuilder
+            ->expects($this->once())
+            ->method('getSingleWidgetJs')
+            ->willReturn('achievement unlocked!');
+
         $viewHelper = new TwViewHelper(
-            ServiceManagerFactory::getServiceManager()->get(WidgetOptions::class),
-            ServiceManagerFactory::getServiceManager()->get(TimelineBuilder::class)
+            $widgetOption,
+            $timelineBuilder
         );
 
-        $this->assertGreaterThan(0, strpos($viewHelper->__invoke([]), 'class="twitter-timeline"'));
+        $this->assertGreaterThan(0, strpos($viewHelper([]), 'achievement unlocked!'));
     }
 
     /**
