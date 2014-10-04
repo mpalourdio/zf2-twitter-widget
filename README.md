@@ -62,7 +62,7 @@ Their PHP equivalent as array keys to use in the view helper are  :
 'dataAriaPolite'  => 'polite or assertive',
 ```
 
-The view helper second paramater is a boolean (true by default), that indicates if you must render the javascript code for your widget. If you have more that one widget on your page,
+The view helper second parameter is a boolean (true by default), that indicates if you must render the javascript code for your widget. If you have more that one widget on your page,
 use the ```OneTimeJsViewHelper``` to only add once the javascript code, just before your ```</body>```. This will avoid overhead. See https://dev.twitter.com/web/javascript/loading
 
 ```php
