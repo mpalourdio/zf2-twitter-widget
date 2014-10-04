@@ -37,7 +37,7 @@ echo $this->tw(
             'href'         => 'https://twitter.com/NickName',
             'hrefText'     => 'Here type a title'
         ],
-        true/false
+        true/false (true is default)
     );
 ```
 
@@ -60,6 +60,16 @@ Their PHP equivalent as array keys to use in the view helper are  :
 'dataTweetLimit'  => 20,
 'dataRelated'     => 'benward,endform',
 'dataAriaPolite'  => 'polite or assertive',
+```
+
+You can pass an instance of ```TwitterWidgets\Options\WidgetOptions``` instead of the array (or any extension of ```Zend\Stdlib\AbstractOptions```).
+
+```php
+$options = new TwitterWidgets\Options\WidgetOptions();
+$options->setDataWidgetId('1245687955000');
+$options->setHref('https://twitter.com/NickName');
+$options->setHrefText('Here type a title');
+echo $this->tw($options);
 ```
 
 The view helper second parameter is a boolean (true by default), that indicates if you must render the javascript code for your widget. If you have more that one widget on your page,
