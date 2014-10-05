@@ -53,7 +53,7 @@ Their PHP equivalent as array keys to use in the view helper are  :
 'dataTheme'       => 'ex: dark',
 'dataLinkColor'   => 'ex: #cc0000',
 'width'           => 300 (integer),
-'height'          => 400 (integer,
+'height'          => 400 (integer),
 'dataChrome'      => 'noheader nofooter noborders noscrollbar transparent', => a string with options separated by a single space
 'dataBorderColor' => 'border color used by the widget',
 'language'        => 'The widget language detected from the page, based on the HTML lang attribute of your content. You can also set the HTML lang attribute on the embed code itself.',
