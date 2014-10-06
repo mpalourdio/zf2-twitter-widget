@@ -11,7 +11,7 @@
 zf2-twitter-widget
 ==================
 
-ZF2 view helper to easily display twitter timelines widgets. Based on this library : https://github.com/mpalourdio/TwitterWidgets
+ZF2 view helper to easily display twitter embedded timelines widgets in a ZF2 project. Based on this library : https://github.com/mpalourdio/TwitterWidgets
 
 Requirements
 ============
@@ -20,14 +20,14 @@ PHP 5.5+ - Only Composer installation supported
 Installation
 ============
 Add to the **require** list of your composer.json
-```"mpalourdio/zf2-twitter-widget" : "dev-master"```
+```"mpalourdio/zf2-twitter-widget" : "0.*"```
 
 Add "ZfTwitterWidget" to your **modules list** in **application.config.php**
 
 Usage
 =====
-- 1) Create an embed timeline here : https://twitter.com/settings/widgets/new
-- 2) In the javascript generated code, get the URL and the data-widget-id (minimum informations required)
+- 1) Create a timeline widget here : https://twitter.com/settings/widgets/new
+- 2) In the javascript generated code, get the URL and the data-widget-id (minimum information required)
 - 3) Finally, in a view, use with 
 
 ```php
@@ -62,7 +62,7 @@ Their PHP equivalent as array keys to use in the view helper are  :
 'dataAriaPolite'  => 'polite or assertive',
 ```
 
-You can give an instance of ```TwitterWidgets\Options\WidgetOptions``` instead of the array (or any implementation of ```TwitterWidgets\Timeline\WidgetOptionsInterface```).
+You can give an instance of ```TwitterWidgets\Options\WidgetOptions``` instead of an array (or any implementation of ```TwitterWidgets\Timeline\WidgetOptionsInterface```).
 
 ```php
 $options = new TwitterWidgets\Options\WidgetOptions();
@@ -73,7 +73,7 @@ echo $this->tw($options);
 ```
 
 The view helper second parameter is a boolean (true by default), that indicates if you must render the javascript code for your widget. If you have more that one widget on your page,
-use the ```OneTimeJsViewHelper``` to only add once the javascript code, just before your ```</body>```. This will avoid overhead. See https://dev.twitter.com/web/javascript/loading
+use the ```OneTimeJsViewHelper``` to only add once the javascript code, just before your ```</body>```. This will avoid some overhead. See https://dev.twitter.com/web/javascript/loading
 
 ```php
 echo $this->twJS();

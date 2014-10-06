@@ -1,42 +1,47 @@
 {
-    "name":              "mpalourdio/zf2-twitter-widget",
-    "description":       "ZF2 view helper to easily display twitter timelines widgets",
-    "license":           "MIT",
-    "keywords":          [
+    "name":         "mpalourdio/zf2-twitter-widget",
+    "description":  "ZF2 view helper to easily display twitter timelines widgets",
+    "license":      "MIT",
+    "keywords":     [
         "framework",
         "zf2",
         "twitter",
         "widget",
         "timeline"
     ],
-    "homepage":          "https://github.com/mpalourdio/zf2-twitter-widget",
-    "authors":           [
+    "homepage":     "https://github.com/mpalourdio/zf2-twitter-widget",
+    "authors":      [
         {
             "name":     "@mpalourdio",
             "email":    "mpalourdio@gmail.com",
             "homepage": "https://github.com/mpalourdio"
         }
     ],
-    "require":           {
+    "require":      {
         "php":                         ">=5.5",
         "zendframework/zendframework": "2.3.*",
-        "mpalourdio/twitter-widgets":  "dev-master"
+        "mpalourdio/twitter-widgets":  "0.*"
     },
-    "require-dev":       {
+    "require-dev":  {
         "phpunit/phpunit":           "4.*",
         "squizlabs/php_codesniffer": "1.5.*"
     },
-    "autoload":          {
-        "psr-4": {
+    "autoload":     {
+        "psr-4":    {
             "ZfTwitterWidget\\": "src/"
         },
         "classmap": [
             "Module.php"
         ]
     },
-    "autoload-dev":      {
+    "autoload-dev": {
         "psr-4": {
             "ZfTwitterWidgetTests\\": "tests/"
+        }
+    },
+    "extra":        {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
         }
     }
 }
