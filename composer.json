@@ -18,13 +18,16 @@
         }
     ],
     "require":      {
-        "php":                         ">=5.5",
-        "zendframework/zendframework": "2.3.*",
-        "mpalourdio/twitter-widgets":  "0.*"
+        "php":                               ">=5.5",
+        "mpalourdio/twitter-widgets":        "0.*",
+        "zendframework/zend-servicemanager": "~2.3",
+        "zendframework/zend-view":           "~2.3",
+        "zendframework/zend-modulemanager":  "~2.3"
     },
     "require-dev":  {
-        "phpunit/phpunit":           "4.*",
-        "squizlabs/php_codesniffer": "1.5.*"
+        "zendframework/zendframework": "~2.3",
+        "phpunit/phpunit":             "~4.3",
+        "squizlabs/php_codesniffer":   "~1.5"
     },
     "autoload":     {
         "psr-4":    {
