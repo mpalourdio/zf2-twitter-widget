@@ -11,7 +11,7 @@
 namespace ZfTwitterWidget\View;
 
 use TwitterWidgets\Assets\OneTimeJsProvider;
-use Zend\Form\View\Helper\AbstractHelper;
+use Zend\View\Helper\AbstractHelper;
 
 class OneTimeJsViewHelper extends AbstractHelper
 {
