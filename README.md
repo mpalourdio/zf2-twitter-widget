@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/mpalourdio/zf2-twitter-widget.svg?branch=master)](https://travis-ci.org/mpalourdio/zf2-twitter-widget)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mpalourdio/zf2-twitter-widget/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mpalourdio/zf2-twitter-widget/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/mpalourdio/zf2-twitter-widget/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/mpalourdio/zf2-twitter-widget/?branch=master)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/e3049656-58e8-406e-b85a-48e2c79d81df/mini.png)](https://insight.sensiolabs.com/projects/e3049656-58e8-406e-b85a-48e2c79d81df)
 [![PHP 5.5+][ico-engine]][lang]
 [![MIT Licensed][ico-license]][license]
 [ico-engine]: http://img.shields.io/badge/php-5.5+-8892BF.svg
