@@ -77,5 +77,7 @@ The view helper second parameter is a boolean (true by default), that indicates 
 use the ```OneTimeJsViewHelper``` to only add once the javascript code, just before your ```</body>```. This will avoid some overhead. See https://dev.twitter.com/web/javascript/loading
 
 ```php
+$this->inlineScript()->captureStart();
 echo $this->twJS();
+$this->inlineScript()->captureEnd();
 ```
