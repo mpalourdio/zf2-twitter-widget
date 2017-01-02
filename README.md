@@ -2,10 +2,10 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mpalourdio/zf2-twitter-widget/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mpalourdio/zf2-twitter-widget/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/mpalourdio/zf2-twitter-widget/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/mpalourdio/zf2-twitter-widget/?branch=master)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/e3049656-58e8-406e-b85a-48e2c79d81df/mini.png)](https://insight.sensiolabs.com/projects/e3049656-58e8-406e-b85a-48e2c79d81df)
-[![PHP 5.6+][ico-engine]][lang]
+[![PHP 7.0+][ico-engine]][lang]
 [![MIT Licensed][ico-license]][license]
 
-[ico-engine]: http://img.shields.io/badge/php-5.6+-8892BF.svg
+[ico-engine]: http://img.shields.io/badge/php-7.0+-8892BF.svg
 [lang]: http://php.net
 [ico-license]: http://img.shields.io/packagist/l/adlawson/veval.svg
 [license]: LICENSE
@@ -17,7 +17,7 @@ ZF2 view helper to easily display twitter embedded timelines widgets in a ZF2 pr
 
 Requirements
 ============
-PHP 5.6+ - Only Composer installation supported
+PHP 7.0+ - Only Composer installation supported
 
 Installation
 ============
