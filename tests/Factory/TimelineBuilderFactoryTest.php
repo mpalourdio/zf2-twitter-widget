@@ -10,11 +10,12 @@
 
 namespace ZfTwitterWidgetTests\Factory;
 
+use PHPUnit\Framework\TestCase;
 use TwitterWidgets\Timeline\TimelineBuilder;
 use ZfTwitterWidget\Factory\TimelineBuilderFactory;
 use ZfTwitterWidgetTests\Util\ServiceManagerFactory;
 
-class TimelineBuilderFactoryTest extends \PHPUnit_Framework_TestCase
+class TimelineBuilderFactoryTest extends TestCase
 {
     public function testFactoryReturnsInstance()
     {

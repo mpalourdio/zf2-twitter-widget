@@ -10,9 +10,10 @@
 
 namespace ZfTwitterWidgetTests\View;
 
+use PHPUnit\Framework\TestCase;
 use ZfTwitterWidget\View\OneTimeJsViewHelper;
 
-class OneTimeJsViewHelperTest extends \PHPUnit_Framework_TestCase
+class OneTimeJsViewHelperTest extends TestCase
 {
     public function testOneTimeJsViewHelper()
     {

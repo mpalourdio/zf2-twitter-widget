@@ -10,11 +10,12 @@
 
 namespace ZfTwitterWidgetTests\View;
 
+use PHPUnit\Framework\TestCase;
 use ZfTwitterWidget\View\TwViewHelper;
 use ZfTwitterWidget\View\TwViewHelperFactory;
 use ZfTwitterWidgetTests\Util\ServiceManagerFactory;
 
-class TwViewHelperFactoryTest extends \PHPUnit_Framework_TestCase
+class TwViewHelperFactoryTest extends TestCase
 {
     public function testFactoryReturnsInstance()
     {

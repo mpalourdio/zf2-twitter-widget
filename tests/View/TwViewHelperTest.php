@@ -10,11 +10,12 @@
 
 namespace ZfTwitterWidgetTests\View;
 
+use PHPUnit\Framework\TestCase;
 use TwitterWidgets\Options\WidgetOptions;
 use TwitterWidgets\Timeline\TimelineBuilder;
 use ZfTwitterWidget\View\TwViewHelper;
 
-class TwViewHelperTest extends \PHPUnit_Framework_TestCase
+class TwViewHelperTest extends TestCase
 {
     public function testTwViewHelper()
     {

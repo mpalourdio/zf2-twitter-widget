@@ -10,11 +10,12 @@
 
 namespace ZfTwitterWidgetTests\Factory;
 
+use PHPUnit\Framework\TestCase;
 use TwitterWidgets\Options\WidgetOptions;
 use ZfTwitterWidget\Factory\WidgetOptionsFactory;
 use ZfTwitterWidgetTests\Util\ServiceManagerFactory;
 
-class WidgetOptionsFactoryTest extends \PHPUnit_Framework_TestCase
+class WidgetOptionsFactoryTest extends TestCase
 {
     public function testFactoryReturnsInstance()
     {
